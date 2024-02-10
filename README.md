@@ -1,38 +1,19 @@
-# create-svelte
+# Content
+- A permanent, external Web address that can be given to, and accessed by the marker
+- The (rudimentary) Waqq.ly front-end to register pets, and to register dog walkers
+- The microservices-orientated backend storing the above data in a noSQL database
+- A RESTful API for the backend and the frontend to talk to each other
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+# RESTful API
+- User
+    - [GET] get user
+    - [GET] get users
+    - [DELETE] remove user
+    - [POST] add new user
+    - [PATCH] update user
+- Pet
+    - [GET] get pet
+    - [DELETE] remove pet
+    - [POST] add new pet
+    - [PATCH] update pet
+    - [PATCH] set pet walker
