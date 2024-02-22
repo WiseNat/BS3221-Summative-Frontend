@@ -1,25 +1,21 @@
-import { json } from '@sveltejs/kit';
+import { error } from '@sveltejs/kit';
 
-// TODO: Get pet(s)
+// Get pet(s)
 export function GET() {
-
-	return json("TODO");
+	throw error(501, "Not implemented");
 }
 
-// TODO: Delete pet
+// Delete pet
 export function DELETE() {
-
-	return json("TODO");
+	throw error(501, "Not implemented");
 }
 
 // TODO: Add new pet
 export function POST() {
-
-	return json("TODO");
+	throw error(501, "Will be implemented but it isn't yet");
 }
 
-// TODO: Update pet
+// Update pet
 export function PATCH() {
-
-	return json("TODO");
+	throw error(501, "Not implemented");
 }
