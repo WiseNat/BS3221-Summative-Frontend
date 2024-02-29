@@ -1,16 +1,9 @@
 import { error } from '@sveltejs/kit';
 
-// Get user(s)
-export function GET() {
-	throw error(501, "Not implemented");
-}
-
-// TODO: Add new user
+// Add new user
 export function POST() {
-	throw error(501, "Will be implemented but it isn't yet");
-}
+	// TODO: Call AWS API
+	// TODO: Confirmation of call success/failure
 
-// Update user
-export function PATCH() {
-	throw error(501, "Not implemented");
+	throw error(501, "Will be implemented but it isn't yet");
 }
