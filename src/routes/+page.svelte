@@ -1,6 +1,11 @@
 <style>
     :root {
         margin: 3em 6em;
+        font-family: var(--font-family);
+    }
+
+    select {
+        font-family: var(--font-family);
     }
 
     input[type=text], input[type=email], input[type=tel], input[type=date], select {
@@ -14,6 +19,7 @@
     }
 
     input[type=submit] {
+        font-family: var(--font-family);
         width: 100%;
         padding: 14px 20px;
         margin: 20px 0;
@@ -40,17 +46,17 @@
 
 <h1>Register a Dog</h1>
 <form method="POST" action="/dog">
-    <label for="name">Name </label>
-    <input type="text" name="name" id="name" required />
+    <label for="dog-name">Name </label>
+    <input type="text" name="dog-name" id="dog-name" required />
     <br>
-    <label for="owner">Owner </label>
-    <input type="text" name="owner" id="owner" required />
+    <label for="dog-owner">Owner </label>
+    <input type="text" name="dog-owner" id="dog-owner" required />
     <br>
-    <label for="breed">Breed </label>
-    <input type="text" name="breed" id="breed" required />
+    <label for="dog-breed">Breed </label>
+    <input type="text" name="dog-breed" id="dog-breed" required />
     <br>
-    <label for="gender">Gender </label>
-    <select name="gender" id="gender-select">
+    <label for="dog-gender">Gender </label>
+    <select name="dog-gender" id="dog-gender">
         <option value="">--Please choose an option--</option>
         <option value="male">Male</option>
         <option value="female">Female</option>
@@ -60,24 +66,24 @@
 </form>
 <hr>
 <h1>Register a Walker</h1>
-<form method="POST" action="/walker">
-    <label for="name">First Name </label>
-    <input type="text" name="name" id="name" required/>
+    <form method="POST" action="/walker">
+    <label for="walker-first-name">First Name </label>
+    <input type="text" name="walker-first-name" id="walker-first-name" required/>
     <br>
-    <label for="name">Last Name </label>
-    <input type="text" name="name" id="name" required/>
+    <label for="walker-last-name">Last Name </label>
+    <input type="text" name="walker-last-name" id="walker-last-name" required/>
     <br>
-    <label for="email">Email </label>
-    <input type="email" name="email" id="email" required/>
+    <label for="walker-email">Email </label>
+    <input type="email" name="walker-email" id="walker-email" required/>
     <br>
-    <label for="town-city">Town/City </label>
-    <input type="text" name="town-city" id="town-city" required/>
+    <label for="walker-town-city">Town/City </label>
+    <input type="text" name="walker-town-city" id="walker-town-city" required/>
     <br>
-    <label for="contact-number">Contact Number </label>
-    <input type="tel" name="contact-number" id="contact-number" required/>
+    <label for="walker-contact-number">Contact Number </label>
+    <input type="tel" name="walker-contact-number" id="walker-contact-number" required/>
     <br>
-    <label for="dob">Date of Birth </label>
-    <input type="date" name="dob" id="dob" required/>
+    <label for="walker-dob">Date of Birth </label>
+    <input type="date" name="walker-dob" id="walker-dob" required/>
     <br>
     <input type="submit" value="Submit"/>
 </form>
