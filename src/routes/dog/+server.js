@@ -1,6 +1,6 @@
 import { error } from '@sveltejs/kit';
 
-// Add new pet
+// Add new dog
 export function POST() {
 	// TODO: Call AWS API
 	// TODO: Confirmation of call success/failure

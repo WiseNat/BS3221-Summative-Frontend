@@ -39,7 +39,7 @@
 </style>
 
 <h1>Register a Dog</h1>
-<form method="POST">
+<form method="POST" action="/dog">
     <label for="name">Name </label>
     <input type="text" name="name" id="name" required />
     <br>
@@ -60,7 +60,7 @@
 </form>
 <hr>
 <h1>Register a Walker</h1>
-<form method="POST">
+<form method="POST" action="/walker">
     <label for="name">First Name </label>
     <input type="text" name="name" id="name" required/>
     <br>
