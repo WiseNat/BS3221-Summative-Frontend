@@ -1,18 +1,17 @@
-<link rel="stylesheet" href="app.css" type="text/css" />
-
+<title>Dog Routes</title>
 <h1>Register a Dog</h1>
 <form method="POST" action="/dog">
-    <label for="dog-name">Name </label>
-    <input type="text" name="dog-name" id="dog-name" required />
+    <label for="register-dog-name" required>Dog Name </label>
+    <input type="text" name="register-dog-name" id="register-dog-name" required />
     <br>
-    <label for="dog-owner">Owner </label>
-    <input type="text" name="dog-owner" id="dog-owner" required />
+    <label for="register-owner" required>Owner Name </label>
+    <input type="text" name="register-owner" id="register-owner" required />
     <br>
-    <label for="dog-breed">Breed </label>
-    <input type="text" name="dog-breed" id="dog-breed" required />
+    <label for="register-breed" required>Breed </label>
+    <input type="text" name="register-breed" id="register-breed" required />
     <br>
-    <label for="dog-gender">Gender </label>
-    <select name="dog-gender" id="dog-gender">
+    <label for="register-gender">Gender </label>
+    <select name="register-gender" id="register-gender">
         <option value="">--Please choose an option--</option>
         <option value="male">Male</option>
         <option value="female">Female</option>
@@ -21,4 +20,14 @@
     <input type="submit" value="Submit"/>
 </form>
 <hr>
-<!-- GET form -->
+<h1>Find a Dog</h1>
+    <form method="POST" action="/dog">
+    <label for="find-town-city">Dog Name </label>
+    <input type="text" name="find-town-city" id="find-town-city" required/>
+    <br>
+    <label for="find-owner">Owner Name </label>
+    <input type="text" name="find-owner" id="find-owner" required />
+    <br>
+    <input type="submit" value="Submit"/>
+</form>
+<!-- TODO: Populate data here based on POST req -->

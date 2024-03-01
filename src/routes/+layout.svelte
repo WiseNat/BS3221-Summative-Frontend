@@ -19,6 +19,10 @@
 		height: 100%;
 	}
 
+	nav > a:hover {
+		color: var(--snow);
+	}
+
 	.body {
 		margin: 3em 14em;
 	}
@@ -30,6 +34,7 @@
 
 	.logo {
 		margin: 0 20px 0 0;
+		color: var(--snow);
 	}
 </style>
 

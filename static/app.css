@@ -32,6 +32,7 @@ input[type=text], input[type=email], input[type=tel], input[type=date], select {
     box-sizing: border-box;
     border: 1px solid gray;
     border-radius: 4px;
+    box-shadow: none;
 }
 
 input[type=submit] {
@@ -48,6 +49,18 @@ input[type=submit] {
 
 input[type=submit]:hover {
     background-color: var(--steel-teal);
+}
+
+label[required]:after {
+    content:" *";
+    color: red;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: solid var(--yankees-blue);
 }
 
 br {

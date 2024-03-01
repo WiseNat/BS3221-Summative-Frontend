@@ -1,26 +1,32 @@
-<link rel="stylesheet" href="app.css" type="text/css" />
-
+<title>Walker Routes</title>
 <h1>Register a Walker</h1>
     <form method="POST" action="/walker">
-    <label for="walker-first-name">First Name </label>
-    <input type="text" name="walker-first-name" id="walker-first-name" required/>
+    <label for="register-first-name" required>First Name </label>
+    <input type="text" name="register-first-name" id="register-first-name" required/>
     <br>
-    <label for="walker-last-name">Last Name </label>
-    <input type="text" name="walker-last-name" id="walker-last-name" required/>
+    <label for="register-last-name" required>Last Name </label>
+    <input type="text" name="register-last-name" id="register-last-name" required/>
     <br>
-    <label for="walker-email">Email </label>
-    <input type="email" name="walker-email" id="walker-email" required/>
+    <label for="register-email" required>Email </label>
+    <input type="email" name="register-email" id="register-email" required/>
     <br>
-    <label for="walker-town-city">Town/City </label>
-    <input type="text" name="walker-town-city" id="walker-town-city" required/>
+    <label for="register-town-city" required>Town/City </label>
+    <input type="text" name="register-town-city" id="register-town-city" required/>
     <br>
-    <label for="walker-contact-number">Contact Number </label>
-    <input type="tel" name="walker-contact-number" id="walker-contact-number" required/>
+    <label for="register-contact-number" required>Contact Number </label>
+    <input type="tel" name="register-contact-number" id="register-contact-number" required/>
     <br>
-    <label for="walker-dob">Date of Birth </label>
-    <input type="date" name="walker-dob" id="walker-dob" required/>
+    <label for="register-dob" required>Date of Birth </label>
+    <input type="date" name="register-dob" id="register-dob" required/>
     <br>
     <input type="submit" value="Submit"/>
 </form>
 <hr>
-<!-- GET form -->
+<h1>Find a Walker</h1>
+    <form method="POST" action="/walker">
+    <label for="find-town-city">Town/City </label>
+    <input type="text" name="find-town-city" id="find-town-city" required/>
+    <br>
+    <input type="submit" value="Submit"/>
+</form>
+<!-- TODO: Populate data here based on POST req -->
