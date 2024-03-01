@@ -1,10 +1,10 @@
 <!-- TODO: NAV BAR HERE -->
 <link rel="stylesheet" href="app.css" type="text/css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 <style>
 	nav {
 		background-color: var(--blue-sapphire);
-		/* padding: 1.5em 14em; */
 		padding: 1.5em 14em;
 		position: sticky;
 		top: 0;
@@ -36,11 +36,20 @@
 		margin: 0 20px 0 0;
 		color: var(--snow);
 	}
+
+	.material-symbols-outlined {
+		vertical-align: bottom;
+		font-variation-settings:
+		'FILL' 0,
+		'wght' 400,
+		'GRAD' 0,
+		'opsz' 24
+	}
 </style>
 
 <nav class="unselectable">
 	<a class="logo" href="/">
-		<!-- Actual logo img here? -->
+		<span class="material-symbols-outlined">pets</span>
 		<strong>wagg.</strong>ly
 	</a>
 	<span class="verticalLine"></span>
