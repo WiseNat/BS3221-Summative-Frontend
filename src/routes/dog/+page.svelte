@@ -1,3 +1,7 @@
+<script>
+  export let form;
+</script>
+
 <title>Dog Routes</title>
 <h1>Register a Dog</h1>
 <form method="POST" action="/dog">
@@ -17,11 +21,29 @@
 </form>
 <hr>
 <h1>Find a Dog</h1>
-    <form method="POST" action="/dog">
-    <label for="find-town-city" required>Dog Name </label>
-    <input type="text" name="find-town-city" id="find-town-city" required/>
-    <label for="find-owner" required>Owner Name </label>
-    <input type="text" name="find-owner" id="find-owner" required />
+    <form method="POST">
+    <label for="find-dog-name" required>Dog Name </label>
+    <input type="text" name="find-dog-name" id="find-dog-name" required/>
+    <label for="find-owner-name" required>Owner Name </label>
+    <input type="text" name="find-owner-name" id="find-owner-name" required />
     <input type="submit" value="Submit"/>
 </form>
-<!-- TODO: Populate data here based on POST req -->
+<br>
+<table>
+    <tr>
+        <th>Dog Name</th>
+        <th>Owner Name</th>
+        <th>Breed</th>
+        <th>Gender</th>
+    </tr>
+    {#if form}
+        {#each form as dog}
+                <tr>
+                    <td>{dog.dog_name}</td>
+                    <td>{dog.owner_name}</td>
+                    <td>{dog.breed}</td>
+                    <td>{dog.gender}</td>
+                </tr>
+        {/each}
+    {/if}
+</table>

@@ -1,3 +1,7 @@
+<script>
+  export let form;
+</script>
+
 <title>Walker Routes</title>
 <h1>Register a Walker</h1>
     <form method="POST" action="/walker">
@@ -22,4 +26,26 @@
     <input type="text" name="find-town-city" id="find-town-city" required/>
     <input type="submit" value="Submit"/>
 </form>
-<!-- TODO: Populate data here based on POST req -->
+<br>
+<table>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Town/City</th>
+        <th>Contact Number</th>
+        <th>Date of Birth</th>
+    </tr>
+    {#if form}
+        {#each form as walker}
+                <tr>
+                    <td>{walker.first_name}</td>
+                    <td>{walker.last_name}</td>
+                    <td>{walker.email}</td>
+                    <td>{walker.town_city}</td>
+                    <td>{walker.contact_number}</td>
+                    <td>{walker.date_of_birth}</td>
+                </tr>
+        {/each}
+    {/if}
+</table>
