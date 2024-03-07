@@ -6,7 +6,7 @@
 
 :root {
     --snow: #F8F9FB;
-    --azureish-White: #CFEAE5; 
+    --azureish-white: #CFEAE5; 
     --steel-teal: #508895;
     --blue-sapphire: #1C6180;
     --yankees-blue: #112638;
@@ -61,6 +61,29 @@ select:focus,
 textarea:focus,
 button:focus {
     outline: var(--yankees-blue) solid 1px;
+}
+
+table {
+    width: 100%;
+    border: 1px solid var(--blue-sapphire);
+    border-collapse: collapse;
+}
+
+th {
+    background-color: var(--blue-sapphire);
+    color: var(--snow);
+}
+
+td {
+    text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: var(--snow);
+}
+
+tr:nth-child(odd) {
+  background-color: rgb(197, 197, 197);
 }
 
 br {

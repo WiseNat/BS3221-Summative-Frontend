@@ -13,7 +13,7 @@
 	nav > a {
 		margin: 0px 30px;
 		padding: 1.5em 0em;
-		color: var(--azureish-White);
+		color: var(--azureish-white);
 		text-decoration-line: none;
 		height: 100%;
 	}
