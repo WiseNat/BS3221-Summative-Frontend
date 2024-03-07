@@ -18,7 +18,7 @@
 <hr>
 <h1>Find a Walker</h1>
     <form method="POST" action="/walker">
-    <label for="find-town-city">Town/City </label>
+    <label for="find-town-city" required>Town/City </label>
     <input type="text" name="find-town-city" id="find-town-city" required/>
     <input type="submit" value="Submit"/>
 </form>

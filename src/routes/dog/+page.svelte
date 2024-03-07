@@ -18,9 +18,9 @@
 <hr>
 <h1>Find a Dog</h1>
     <form method="POST" action="/dog">
-    <label for="find-town-city">Dog Name </label>
+    <label for="find-town-city" required>Dog Name </label>
     <input type="text" name="find-town-city" id="find-town-city" required/>
-    <label for="find-owner">Owner Name </label>
+    <label for="find-owner" required>Owner Name </label>
     <input type="text" name="find-owner" id="find-owner" required />
     <input type="submit" value="Submit"/>
 </form>
