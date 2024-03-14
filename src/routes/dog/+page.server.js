@@ -2,7 +2,6 @@
 export const actions = {
   default: async ({ request }) => {
     const data = await request.formData();
-    // let email = data.get('email')
 
 	// TODO: AWS POST req
 

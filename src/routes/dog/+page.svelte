@@ -1,10 +1,11 @@
 <script>
-  export let form;
+    export let form;
+    import { enhance } from '$app/forms'
 </script>
 
 <title>Dog Routes</title>
 <h1>Register a Dog</h1>
-<form method="POST" action="/dog">
+<form method="POST" action="/dog" use:enhance>
     <label for="register-dog-name" required>Dog Name </label>
     <input type="text" name="register-dog-name" id="register-dog-name" required />
     <label for="register-owner" required>Owner Name</label>
@@ -21,7 +22,7 @@
 </form>
 <hr>
 <h1>Find a Dog</h1>
-    <form method="POST">
+    <form method="POST" action="/dog" use:enhance>
     <label for="find-dog-name" required>Dog Name </label>
     <input type="text" name="find-dog-name" id="find-dog-name" required/>
     <label for="find-owner-name" required>Owner Name </label>
