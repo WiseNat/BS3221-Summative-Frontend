@@ -1,15 +1,24 @@
+import { DOG_REGISTER_URL, DOG_REGISTER_SECRET } from '$env/static/private';
+
 // Add new dog
 export const actions = {
   register: async ({ request }) => {
-    const data = await request.formData();
+	const formData = await request.formData();
 
-	// TODO: AWS POST req
-
-	return "Registered"
+	const response = await fetch(DOG_REGISTER_URL, {
+		method: "POST",
+		headers: {
+			"x-api-key": DOG_REGISTER_SECRET,
+			"content-Type": "application/json"
+		},
+		body: JSON.stringify(Object.fromEntries(formData))
+	})
+	
+	return await response.json();
   },
 
   find: async ({ request }) => {
-    const data = await request.formData();
+	const formData = await request.formData();
 
 	// TODO: AWS POST req
 

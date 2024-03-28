@@ -1,11 +1,19 @@
 // Add new walker
 export const actions = {
   register: async ({ request }) => {
-    const data = await request.formData();
+	const formData = await request.formData();
 
-	// TODO: AWS POST req
-
-	return "Registered"
+	// TODO: Move URL and API key to env file
+	const response = await fetch("URL", {
+		method: "POST",
+		headers: {
+			"x-api-key": "KEY",
+			"content-Type": "application/json"
+		},
+		body: JSON.stringify(Object.fromEntries(formData))
+	})
+	
+	return await response.json();
   },
 
   find: async ({ request }) => {
