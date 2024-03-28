@@ -1,12 +1,14 @@
+import { DOG_REGISTER_URL, DOG_REGISTER_SECRET } from '$env/static/private';
+
 // Add new dog
 export const actions = {
   register: async ({ request }) => {
 	const formData = await request.formData();
 
-	const response = await fetch(import.meta.env.DOG_REGISTER_URL, {
+	const response = await fetch(DOG_REGISTER_URL, {
 		method: "POST",
 		headers: {
-			"x-api-key": import.meta.env.DOG_REGISTER_SECRET,
+			"x-api-key": DOG_REGISTER_SECRET,
 			"content-Type": "application/json"
 		},
 		body: JSON.stringify(Object.fromEntries(formData))

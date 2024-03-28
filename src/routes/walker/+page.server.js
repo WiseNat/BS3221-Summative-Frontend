@@ -1,13 +1,15 @@
+import { WALKER_REGISTER_URL, WALKER_REGISTER_SECRET } from '$env/static/private';
+
 // Add new walker
 export const actions = {
   register: async ({ request }) => {
 	const formData = await request.formData();
 
 	// TODO: Move URL and API key to env file
-	const response = await fetch(import.meta.env.WALKER_REGISTER_URL, {
+	const response = await fetch(WALKER_REGISTER_URL, {
 		method: "POST",
 		headers: {
-			"x-api-key": import.meta.env.WALKER_REGISTER_SECRET,
+			"x-api-key": WALKER_REGISTER_SECRET,
 			"content-Type": "application/json"
 		},
 		body: JSON.stringify(Object.fromEntries(formData))
