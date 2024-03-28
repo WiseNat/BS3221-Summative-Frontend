@@ -1,6 +1,14 @@
 // Add new dog
 export const actions = {
-  default: async ({ request }) => {
+  register: async ({ request }) => {
+    const data = await request.formData();
+
+	// TODO: AWS POST req
+
+	return "Registered"
+  },
+
+  find: async ({ request }) => {
     const data = await request.formData();
 
 	// TODO: AWS POST req
