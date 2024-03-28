@@ -4,10 +4,10 @@ export const actions = {
 	const formData = await request.formData();
 
 	// TODO: Move URL and API key to env file
-	const response = await fetch("URL", {
+	const response = await fetch(import.meta.env.WALKER_REGISTER_URL, {
 		method: "POST",
 		headers: {
-			"x-api-key": "KEY",
+			"x-api-key": import.meta.env.WALKER_REGISTER_SECRET,
 			"content-Type": "application/json"
 		},
 		body: JSON.stringify(Object.fromEntries(formData))
