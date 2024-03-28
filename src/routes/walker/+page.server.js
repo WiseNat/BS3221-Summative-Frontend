@@ -4,10 +4,10 @@ export const actions = {
 	const formData = await request.formData();
 
 	// TODO: Move URL and API key to env file
-	const response = await fetch(process.env.VITE_WALKER_REGISTER_URL, {
+	const response = await fetch(import.meta.env.VITE_WALKER_REGISTER_URL, {
 		method: "POST",
 		headers: {
-			"x-api-key": process.env.VITE_WALKER_REGISTER_SECRET,
+			"x-api-key": import.meta.env.VITE_WALKER_REGISTER_SECRET,
 			"content-Type": "application/json"
 		},
 		body: JSON.stringify(Object.fromEntries(formData))
