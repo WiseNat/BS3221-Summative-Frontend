@@ -12,9 +12,8 @@
     <input type="text" name="register-owner" id="register-owner" required />
     <label for="register-breed" required>Breed </label>
     <input type="text" name="register-breed" id="register-breed" required />
-    <label for="register-gender">Gender </label>
-    <select name="register-gender" id="register-gender">
-        <option value="">--Please choose an option--</option>
+    <label for="register-gender" required>Gender </label>
+    <select name="register-gender" id="register-gender" required>
         <option value="male">Male</option>
         <option value="female">Female</option>
     </select>
@@ -23,10 +22,10 @@
 <hr>
 <h1>Find a Dog</h1>
     <form method="POST" action="?/find" use:enhance>
-    <label for="find-dog-name" required>Dog Name </label>
-    <input type="text" name="find-dog-name" id="find-dog-name" required/>
-    <label for="find-owner-name" required>Owner Name </label>
-    <input type="text" name="find-owner-name" id="find-owner-name" required />
+    <label for="find-dog-name">Dog Name </label>
+    <input type="text" name="find-dog-name" id="find-dog-name"/>
+    <label for="find-owner-name">Owner Name </label>
+    <input type="text" name="find-owner-name" id="find-owner-name" />
     <input type="submit" value="Submit"/>
 </form>
 <br>
@@ -40,8 +39,8 @@
     {#if form}
         {#each form as dog}
                 <tr>
-                    <td>{dog.dog_name}</td>
-                    <td>{dog.owner_name}</td>
+                    <td>{dog.name}</td>
+                    <td>{dog.owner}</td>
                     <td>{dog.breed}</td>
                     <td>{dog.gender}</td>
                 </tr>
