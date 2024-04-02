@@ -6,7 +6,7 @@ export const actions = {
 	const response = await fetch(process.env.DOG_REGISTER_URL, {
 		method: "POST",
 		headers: {
-			"x-api-key": process.env.DOG_REGISTER_SECRET,
+			"x-api-key": process.env.API_KEY,
 			"content-Type": "application/json"
 		},
 		body: JSON.stringify(Object.fromEntries(formData))
