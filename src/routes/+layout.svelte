@@ -49,7 +49,7 @@
 <nav class="unselectable">
 	<a class="logo" href="/">
 		<span class="material-symbols-outlined">pets</span>
-		<strong>wagg.</strong>ly
+		<strong>waqq.</strong>ly
 	</a>
 	<span class="verticalLine"></span>
 	<a href="/walker">Walker</a>
