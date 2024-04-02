@@ -1,12 +1,14 @@
+import { env } from '$env/dynamic/private'
+
 // Add new dog
 export const actions = {
   register: async ({ request }) => {
 	const formData = await request.formData();
 
-	const response = await fetch(process.env.DOG_REGISTER_URL, {
+	const response = await fetch(env.DOG_REGISTER_URL, {
 		method: "POST",
 		headers: {
-			"x-api-key": process.env.API_KEY,
+			"x-api-key": env.API_KEY,
 			"content-Type": "application/json"
 		},
 		body: JSON.stringify(Object.fromEntries(formData))
