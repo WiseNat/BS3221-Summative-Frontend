@@ -1,6 +1,5 @@
 import { env } from '$env/dynamic/private'
 
-// Add new dog
 export const actions = {
   register: async ({ request }) => {
 	const formData = await request.formData();
